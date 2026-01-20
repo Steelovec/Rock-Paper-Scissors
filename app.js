@@ -1,17 +1,22 @@
-function getRandomInt(max){
-    return Math.floor(Math.random() * max)
+function getRandomInt(){
+    return Math.floor(Math.random() * 3)
 };
 
-const gen = getRandomInt(3);
+function getComputerChoice(){
+    const gen = getRandomInt();
 
-if(gen == 1){
-    console.log("Rock")
-}
-else if(gen == 2){
-    console.log("Paper")
-}
-else{
-    console.log("Scrissors")
+    if (gen === 1) {
+        return "Rock"
+    } else if (gen === 2) {
+        return "Paper"
+    } else {
+        return "Scissors"
+    }
 }
 
-console.log(gen);
+console.log(getComputerChoice())
+
+
+function getHumanChoice(){
+    prompt("What will you choose: ")
+}
