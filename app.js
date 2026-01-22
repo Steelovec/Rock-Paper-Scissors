@@ -18,5 +18,29 @@ console.log(getComputerChoice())
 
 
 function getHumanChoice(){
-    prompt("What will you choose: ")
+    const answer = prompt("What will you choose: ")
+    
+    if(answer == "rock" ){
+        return "Rock"
+    } else if(answer == "paper" ){
+        return "Paper"
+    } else if(answer == "scissors" ){
+        return "Scissors"
+    } 
 }
+
+console.log(getHumanChoice())
+
+let humanScore = 0
+let computerScore = 0
+
+function playRound(humanChoice, computerChoice){
+    if(humanChoice == "Rock" && computerChoice == "Paper"){
+        return "Human won!"
+    }
+}
+
+const humanSelection = getHumanChoice()
+const computerSelection = getComputerChoice()
+
+playRound(humanSelection, computerSelection)
